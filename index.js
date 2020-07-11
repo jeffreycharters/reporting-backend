@@ -12,9 +12,9 @@ app.get('/api/ping', (req, res) => {
   res.send('<h1>pong </h1>')
 })
 
-app.get('/api/methods/:id', (req, res) => {
-  const id = req.params.id
-  const method = methods.find(m => m.name === id)
+app.get('/api/methods/:name', (req, res) => {
+  const name = req.params.name
+  const method = methods.find(m => m.name === name)
   res.json(method)
 })
 
