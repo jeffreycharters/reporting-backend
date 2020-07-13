@@ -23,7 +23,7 @@ app.get('/api/methods', (req, res) => {
 })
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, '/'), function (err) {
+  res.sendFile(path.join(__dirname, '/index.html'), function (err) {
     if (err) {
       res.status(500).send(err)
     }
