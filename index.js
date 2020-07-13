@@ -22,6 +22,14 @@ app.get('/api/methods', (req, res) => {
   res.json(methods)
 })
 
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '/'), function (err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 const PORT = process.env.PORT || 3001
 app.listen(PORT)
 console.log(`Server running on port ${PORT}`)
