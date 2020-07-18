@@ -22,6 +22,7 @@ app.get('/api/methods', (req, res) => {
   res.json(methods)
 })
 
+
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, '/index.html'), function (err) {
     if (err) {
