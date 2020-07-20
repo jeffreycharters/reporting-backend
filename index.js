@@ -25,11 +25,7 @@ app.get('/api/methods', (req, res) => {
 
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'), function (err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
+  res.sendFile('/build/index.html');
 })
 
 const PORT = process.env.PORT || 3001
