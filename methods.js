@@ -4,11 +4,11 @@ const methods = [
     description: "Metals in Blood and Serum",
     elements: ["Mn", "Fe", "Co", "Cu", "Zn", "Se", "Mo", "Pb"],
     units: ["ppb", "ppm", "ppb", "ppm", "ppm", "ppm", "ppb", "ppm"],
+    checkStdTolerance: 0.1,
     checkStds: [
       {
         name: '5/50 ppb',
         expectedValues: [5, 50, 5, 50, 50, 5, 5, 5],
-        tolerance: 0.1
       }
     ],
     blanks: [
@@ -43,11 +43,11 @@ const methods = [
     description: "Iodine in Milk, Tissue and Feeds",
     elements: ["I"],
     units: ["ppb"],
+    checkStdTolerance: 0.15,
     checkStds: [
       {
         name: '0.5 ppm check',
         expectedValues: [500],
-        tolerance: 0.15
       }
     ],
     blanks: [
@@ -72,11 +72,11 @@ const methods = [
     description: "Metals in Food",
     elements: ["Be", "B", "Mg", "Al", "Ti", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "As", "Se", "Mo", "Cd", "Sn", "Sb", "Hg", "Pb"],
     units: ["ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm", "ppm"],
+    checkStdTolerance: 0.1,
     checkStds: [
       {
         name: 'Calibration Check',
         expectedValues: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0.5, 10],
-        tolerance: 0.15
       }
     ],
     blanks: [
