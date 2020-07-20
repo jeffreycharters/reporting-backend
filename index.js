@@ -24,9 +24,9 @@ app.get('/api/methods', (req, res) => {
 })
 
 
-app.get('/*', function (req, res) {
-  res.sendFile('/build/index.html');
-})
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/build/index.html'));
+});
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT)
